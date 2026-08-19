@@ -16,19 +16,26 @@
 <body>
 
     <header>
-        <h1>Joshua Herbert Japheth</h1>
-        <p>Artificial Intelligence & Data Science Student</p>
+        <div class="header-content">
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#profile">Profile</a>
-            <a href="#cv">CV</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#activities">Activities</a>
-            <a href="#contact">Contact</a>
-        </nav>
+            <div>
+                <h1>Joshua Herbert Japheth</h1>
+                <p>Artificial Intelligence & Data Science Student</p>
+            </div>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#profile">Profile</a>
+                <a href="#cv">CV</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#articles">Articles</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
     </header>
+
 
     <main>
 
@@ -36,7 +43,7 @@
 
             <div class="home-text">
 
-                <p>Hello, I'm</p>
+                <p id="greeting">Hello, I'm</p>
 
                 <h2>Joshua Herbert Japheth</h2>
 
@@ -246,7 +253,7 @@
 
                     <img
                         src="images/project1.png"
-                        alt="Screenshot of my previous personal portfolio website">
+                        alt="Screenshot of previous personal portfolio website">
 
                     <h3>Previous Personal Portfolio Website</h3>
 
@@ -262,7 +269,8 @@
 
                     <a
                         href="https://www.jhjportfolio.fun/"
-                        target="_blank">
+                        target="_blank"
+                        class="text-link">
                         Visit Website
                     </a>
 
@@ -273,7 +281,7 @@
 
                     <img
                         src="images/project2.png"
-                        alt="Screenshot of my current personal portfolio website">
+                        alt="Screenshot of current personal portfolio website">
 
                     <h3>Current Personal Portfolio Website</h3>
 
@@ -290,7 +298,8 @@
 
                     <a
                         href="https://github.com/stredevirad/my-portfolio-joshua-herbert-japheth"
-                        target="_blank">
+                        target="_blank"
+                        class="text-link">
                         View GitHub Repository
                     </a>
 
@@ -301,30 +310,19 @@
         </section>
 
 
-        <section id="activities">
+        <section id="articles">
 
-            <h2>Activities & Gallery</h2>
+            <h2>My Articles</h2>
 
-            <div class="activity-placeholder">
+            <p class="section-description">
+                Recent technology articles from the DEV Community.
+            </p>
 
-                <h3>Activities and Gallery</h3>
+            <div id="articles-container">
 
-                <p>
-                    Photographs and details of academic, technical,
-                    professional and college activities will be added
-                    in later phases as relevant activities are completed.
+                <p class="loading">
+                    Loading articles...
                 </p>
-
-            </div>
-
-            <div class="location">
-
-                <h3>My College</h3>
-
-                <iframe
-                    src="https://www.google.com/maps?q=Rajagiri%20School%20of%20Engineering%20%26%20Technology&output=embed"
-                    title="Rajagiri School of Engineering and Technology location">
-                </iframe>
 
             </div>
 
@@ -337,7 +335,7 @@
 
             <div class="contact-container">
 
-                <form>
+                <form id="contact-form">
 
                     <label for="name">
                         Name
@@ -347,8 +345,9 @@
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="Enter your name"
-                        required>
+                        placeholder="Enter your name">
+
+                    <p id="name-error" class="error"></p>
 
 
                     <label for="email">
@@ -359,8 +358,9 @@
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="Enter your email"
-                        required>
+                        placeholder="Enter your email">
+
+                    <p id="email-error" class="error"></p>
 
 
                     <label>
@@ -396,13 +396,16 @@
                     <textarea
                         id="message"
                         name="message"
-                        placeholder="Enter your message"
-                        required></textarea>
+                        placeholder="Enter your message"></textarea>
+
+                    <p id="message-error" class="error"></p>
 
 
                     <button type="submit">
                         Send Message
                     </button>
+
+                    <p id="form-success" class="success"></p>
 
                 </form>
 
@@ -452,6 +455,10 @@
         </p>
 
     </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
